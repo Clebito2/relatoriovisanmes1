@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Resultados - 1º Mês de Consultoria | Visan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --azul-petroleo: #06192a;
+            --verde-vibrante: #00e800;
+            --cinza-claro: #f4f4f4;
+            --texto-escuro: #06192a;
+            --font-primaria: 'Poppins', sans-serif;
+            --font-secundaria: 'Merriweather', serif;
+        }
+        body {
+            font-family: var(--font-primaria);
+            background-color: var(--azul-petroleo);
+            color: var(--cinza-claro);
+            /* Textura padrão adicionada ao fundo */
+            background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+        }
+        .kpi-card {
+            background-color: #0A243D; /* Cor sólida, sem transparência */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .kpi-card:hover {
+            transform: translateY(-5px);
+            background-color: #1E3A5B; /* Azul um pouco mais claro para o hover */
+        }
+        .text-brand-green {
+            color: var(--verde-vibrante);
+        }
+        .font-brand-secondary {
+            font-family: var(--font-secundaria);
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .link-item {
+            background-color: #002b00; /* Verde bem escuro, sólido */
+            border: 1px solid rgba(0, 232, 0, 0.2);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .link-item:hover {
+            background-color: #004d00; /* Verde escuro um pouco mais claro no hover */
+            border-color: rgba(0, 232, 0, 0.4);
+        }
+    </style>
+</head>
+<body class="text-gray-200">
+
+    <!-- Container Principal -->
+    <div class="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Header -->
+        <header class="mb-8 fade-in">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div>
+                    <h1 class="text-3xl font-bold text-white">Dashboard de Resultados da Consultoria</h1>
+                    <p class="text-lg text-gray-400 font-brand-secondary">Relatório do Primeiro Mês: Grupo Visan</p>
+                </div>
+                <div class="text-sm text-gray-400 mt-4 sm:mt-0 text-left sm:text-right">
+                    <p><strong class="font-semibold text-gray-200">Período:</strong> 23/06/2025 - 23/07/2025</p>
+                    <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo%20live%20oficial-36.png" alt="Logo Live Consultoria" class="h-10 mt-2 ml-auto">
+                </div>
+            </div>
+            <div class="mt-4 border-b border-gray-700"></div>
+        </header>
+
+        <!-- Seção de KPIs -->
+        <section class="mb-10 fade-in" style="animation-delay: 0.2s;">
+            <h2 class="text-2xl font-semibold mb-4 text-white">Indicadores de Progresso</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- KPI Card 1 -->
+                <div class="p-6 rounded-xl kpi-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-400">Diagnósticos e Análises</p>
+                            <p class="text-3xl font-bold text-brand-green">7</p>
+                        </div>
+                        <div class="p-3 rounded-full bg-gray-800 text-brand-green">
+                            <i data-lucide="search-check" class="w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- KPI Card 2 -->
+                <div class="p-6 rounded-xl kpi-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-400">Entregáveis e Ferramentas</p>
+                            <p class="text-3xl font-bold text-brand-green">13</p>
+                        </div>
+                        <div class="p-3 rounded-full bg-gray-800 text-brand-green">
+                            <i data-lucide="package-check" class="w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- KPI Card 3 -->
+                <div class="p-6 rounded-xl kpi-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-400">Processos Mapeados</p>
+                            <p class="text-3xl font-bold text-brand-green">3</p>
+                        </div>
+                        <div class="p-3 rounded-full bg-gray-800 text-brand-green">
+                            <i data-lucide="git-merge" class="w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- KPI Card 4 -->
+                <div class="p-6 rounded-xl kpi-card">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-400">Planos Estratégicos</p>
+                            <p class="text-3xl font-bold text-brand-green">4</p>
+                        </div>
+                        <div class="p-3 rounded-full bg-gray-800 text-brand-green">
+                            <i data-lucide="file-text" class="w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Principal: Atividades Realizadas -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Coluna 1: Diagnóstico e Estratégia -->
+            <div class="lg:col-span-1 p-6 rounded-xl kpi-card fade-in" style="animation-delay: 0.4s;">
+                <h3 class="text-xl font-semibold mb-4 flex items-center gap-2 text-white"><i data-lucide="microscope" class="w-6 h-6 text-brand-green"></i>Diagnóstico e Estratégia</h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-green flex-shrink-0"></i><span><strong class="font-semibold text-gray-200">Análise de Não Conformidades:</strong> Identificação de pontos críticos em Compras, Qualidade e A.T.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-green flex-shrink-0"></i><span><strong class="font-semibold text-gray-200">Mapeamento de Processos "AS IS":</strong> Detalhamento do fluxo de Pós-Venda e Locação.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-green flex-shrink-0"></i><span><strong class="font-semibold text-gray-200">Mapeamento do Ecossistema:</strong> Análise estratégica das 7 empresas do grupo.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-green flex-shrink-0"></i><span><strong class="font-semibold text-gray-200">Validação de Ferramentas:</strong> Pesquisa e validação do sistema LocApp.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-green flex-shrink-0"></i><span><strong class="font-semibold text-gray-200">Saneamento de Dados:</strong> Revisão e padronização dos cadastros no LocApp.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-green flex-shrink-0"></i><span><strong class="font-semibold text-gray-200">Levantamento de Requisitos:</strong> Coleta de dados para estruturação da Visan Online.</span></li>
+                    <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 mt-0.5 text-brand-green flex-shrink-0"></i><span><strong class="font-semibold text-gray-200">Análise de Parceria:</strong> Reunião estratégica entre JoinCI e Ecossistema Live.</span></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 2: Entregáveis e Ferramentas -->
+            <div class="lg:col-span-2 p-6 rounded-xl kpi-card fade-in" style="animation-delay: 0.6s;">
+                <h3 class="text-xl font-semibold mb-4 flex items-center gap-2 text-white"><i data-lucide="wrench" class="w-6 h-6 text-brand-green"></i>Entregáveis e Ferramentas Concluídas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                    <a href="https://gemini.google.com/share/ffb625c42e0a" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Plano de Automação do Pós-Venda</a>
+                    <a href="#" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Reestruturação Organizacional</a>
+                    <a href="#" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Desenho do Novo Processo de Locação</a>
+                    <a href="#" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Política do Programa de Afiliados</a>
+                    <a href="https://gemini.google.com/share/709e61cb664d" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Manual de Produtos Micromed</a>
+                    <a href="#" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Base de Conhecimento Centralizada</a>
+                    <a href="#" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Adaptação de Templates no LocApp</a>
+                    <a href="https://gemini.google.com/share/6ceb3d38832d" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Processo de Atendimento de Leads</a>
+                    <a href="https://gemini.google.com/share/26c981b5c822" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Plano Estratégico - Bioengine</a>
+                    <a href="#" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Formulário de Requisitos de Sistemas</a>
+                    <a href="https://gemini.google.com/share/708120a61b8a" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Plano de Ação - Visan Online</a>
+                    <a href="https://g.co/gemini/share/a1d68c847593" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Plano de Ação Geral - Visan Médica</a>
+                    <a href="https://docs.google.com/spreadsheets/d/1l-ugQVntUemOzotT_tr2DLKD9h1vwS5UednTAiPH-b8/edit?gid=907186881#gid=907186881" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2 md:col-span-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Checklist de Documentos da Qualidade</a>
+                </div>
+                 <div class="mt-6 pt-4 border-t border-gray-700">
+                    <h4 class="font-semibold text-white">Conclusão do 1º Mês e Próximos Passos</h4>
+                    <p class="text-sm mt-2 text-gray-400 font-brand-secondary">O primeiro mês foi dedicado a um diagnóstico profundo e à construção de uma base estratégica sólida. Concluímos a fase de <strong class="font-semibold text-gray-200">análise e planejamento</strong>. Agora, com processos desenhados e ferramentas validadas, nosso foco se volta para a <strong class="font-semibold text-gray-200">fase de implementação</strong>, começando pelo projeto piloto do LocApp com a Jane e a execução dos planos de ação para a Bioengine e Visan Online.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-10 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
+        <p>&copy; 2025 Grupo Visan. Todos os direitos reservados.</p>
+        <p class="mt-1">Desenvolvido por Cléber Donato</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
