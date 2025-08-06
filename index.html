@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Resultados - 1º Mês de Consultoria | Visan</title>
+    <title>Dashboard de Resultados - Consultoria | Visan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,8 @@
             --azul-petroleo: #06192a;
             --verde-vibrante: #00e800;
             --cinza-claro: #f4f4f4;
-            --texto-escuro: #06192a;
+            --card-bg: #0A243D;
+            --border-color: rgba(255, 255, 255, 0.1);
             --font-primaria: 'Poppins', sans-serif;
             --font-secundaria: 'Merriweather', serif;
         }
@@ -22,17 +23,16 @@
             font-family: var(--font-primaria);
             background-color: var(--azul-petroleo);
             color: var(--cinza-claro);
-            /* Textura padrão adicionada ao fundo */
             background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
         }
         .kpi-card {
-            background-color: #0A243D; /* Cor sólida, sem transparência */
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease, background-color 0.3s ease;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         .kpi-card:hover {
             transform: translateY(-5px);
-            background-color: #1E3A5B; /* Azul um pouco mais claro para o hover */
+            box-shadow: 0 10px 15px -3px rgba(0, 232, 0, 0.1);
         }
         .text-brand-green {
             color: var(--verde-vibrante);
@@ -48,12 +48,12 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .link-item {
-            background-color: #002b00; /* Verde bem escuro, sólido */
+            background-color: rgba(0, 232, 0, 0.05);
             border: 1px solid rgba(0, 232, 0, 0.2);
             transition: background-color 0.3s ease, border-color 0.3s ease;
         }
         .link-item:hover {
-            background-color: #004d00; /* Verde escuro um pouco mais claro no hover */
+            background-color: rgba(0, 232, 0, 0.15);
             border-color: rgba(0, 232, 0, 0.4);
         }
     </style>
@@ -71,7 +71,7 @@
                     <p class="text-lg text-gray-400 font-brand-secondary">Relatório do Primeiro Mês: Grupo Visan</p>
                 </div>
                 <div class="text-sm text-gray-400 mt-4 sm:mt-0 text-left sm:text-right">
-                    <p><strong class="font-semibold text-gray-200">Período:</strong> 23/06/2025 - 23/07/2025</p>
+                    <p><strong class="font-semibold text-gray-200">Período:</strong> Julho/Agosto 2025</p>
                     <img src="https://raw.githubusercontent.com/Clebito2/layout/main/Logo%20live%20oficial-36.png" alt="Logo Live Consultoria" class="h-10 mt-2 ml-auto">
                 </div>
             </div>
@@ -99,7 +99,7 @@
                     <div class="flex items-center justify-between">
                         <div>
                             <p class="text-sm font-medium text-gray-400">Entregáveis e Ferramentas</p>
-                            <p class="text-3xl font-bold text-brand-green">13</p>
+                            <p class="text-3xl font-bold text-brand-green">15</p>
                         </div>
                         <div class="p-3 rounded-full bg-gray-800 text-brand-green">
                             <i data-lucide="package-check" class="w-7 h-7"></i>
@@ -165,6 +165,8 @@
                     <a href="#" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Formulário de Requisitos de Sistemas</a>
                     <a href="https://gemini.google.com/share/708120a61b8a" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Plano de Ação - Visan Online</a>
                     <a href="https://g.co/gemini/share/a1d68c847593" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Plano de Ação Geral - Visan Médica</a>
+                    <a href="https://gemini.google.com/share/54a1bf89f995" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Manual de Devolução de Vendas Online</a>
+                    <a href="https://g.co/gemini/share/ae21d2f0d1fa" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Modelo de Requisição de Compra</a>
                     <a href="https://docs.google.com/spreadsheets/d/1l-ugQVntUemOzotT_tr2DLKD9h1vwS5UednTAiPH-b8/edit?gid=907186881#gid=907186881" target="_blank" class="p-3 rounded-lg link-item flex items-center gap-2 md:col-span-2"><i data-lucide="arrow-right-circle" class="w-4 h-4"></i>Checklist de Documentos da Qualidade</a>
                 </div>
                  <div class="mt-6 pt-4 border-t border-gray-700">
@@ -176,7 +178,6 @@
 
     </div>
 
-    <!-- Footer -->
     <footer class="mt-10 pt-6 border-t border-gray-700 text-center text-sm text-gray-500">
         <p>&copy; 2025 Grupo Visan. Todos os direitos reservados.</p>
         <p class="mt-1">Desenvolvido por Cléber Donato</p>
